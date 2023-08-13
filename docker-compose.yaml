@@ -1,0 +1,11 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8087:8087"
+    volumes:
+      - ./app:/app
+    command: [ "python3", "app.py" ]
